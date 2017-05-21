@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GPSTracking</string>
+    <string name="dialog_button_cancel">キャンセル</string>
+    <string name="dialog_button_positive">はい</string>
+    <string name="dialog_confirm_startstop_title">確認画面</string>
+    <string name="dialog_confirm_startstop_message">トラッキングを終了しますか？</string>
+
+    <string name="dialog_confsetting_title">設定画面</string>
+    <string name="dialog_confsetting_message">Handheld端末で設定してください。</string>
+
+    <string name="RequestPermissions_message">許可されないとアプリが実行できません</string>
+    <string name="PermissionsResult_message">これ以上なにもできません</string>
+    <string name="GPSStart_NGmessage">例外が発生、位置情報のPermissionを許可していますか？</string>
+
+
+    <string-array name="menu">
+        <item>CircledImageView</item>
+        <item>WearableListView</item>
+        <item>ConfirmationActivity</item>
+        <item>WatchViewStub</item>
+        <item>BoxInsetLayout</item>
+        <item>WearableFrameLayout</item>
+    </string-array>
+
+</resources>

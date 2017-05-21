@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tikeda.gpstracking.MainActivity"
+    tools:deviceIds="wear_square">
+
+    <RelativeLayout
+        android:background="@color/black_86p"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textClock"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:format24Hour="kk:mm:ss"
+            android:textSize="18sp"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+        <TextView
+            android:text="00.00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/speed_textview"
+            android:textSize="36sp"
+            android:layout_alignBaseline="@+id/disp_textview"
+            android:layout_alignBottom="@+id/disp_textview"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/holo_blue_bright" />
+
+        <TextView
+            android:text="Km/H"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/disp_textview"
+            android:textStyle="normal|bold|italic"
+            android:textSize="18sp"
+            android:layout_marginBottom="19dp"
+            android:layout_above="@+id/btn_start"
+            android:layout_toEndOf="@+id/speed_textview"
+            android:textColor="@color/card_default_background" />
+
+        <ImageView
+            android:src="@drawable/dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gps_status"
+            android:layout_alignTop="@+id/disp_textview"
+            android:layout_toStartOf="@+id/speed_textview"
+            android:layout_marginEnd="14dp" />
+
+        <TextView
+            android:text="0000m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/accuracy_textview"
+            android:layout_below="@+id/gps_status"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/card_default_background" />
+
+        <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/steps_textView"
+            android:textSize="30sp"
+            android:layout_above="@+id/speed_textview"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/holo_orange_light" />
+
+        <TextView
+            android:text="steps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_label"
+            android:layout_alignBaseline="@+id/steps_textView"
+            android:layout_alignBottom="@+id/steps_textView"
+            android:layout_toEndOf="@+id/steps_textView"
+            android:textColor="@color/card_default_background" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/config_setting"
+            android:onClick="onSettingClick"
+            android:background="@drawable/ic_setting"
+            android:layout_marginRight="50dp"
+            android:src="@drawable/ic_setting"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:visibility="visible" />
+
+        <Button
+            android:text="Start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_start"
+            android:onClick="onStart"
+            android:elevation="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</LinearLayout>

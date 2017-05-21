@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tikeda.gpstracking" >
+
+    <uses-feature android:name="android.hardware.type.watch" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-feature android:name="android.hardware.sensor.stepcounter" android:required="true"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="com.google.android.wearable"
+            android:required="false" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.example.tikeda.gpstracking.MainActivity" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name=".steps.StepSensorService">
+            <intent-filter>
+                <action android:name="com.example.tikeda.gpstracking.jsonsteps.StepSensorService" />
+            </intent-filter>
+
+        </service>
+        <service android:name=".location.GPSLocationService">
+            <intent-filter>
+                <action android:name="com.example.tikeda.gpstracking.location.GPSLocationService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
